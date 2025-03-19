@@ -1,0 +1,23 @@
+/*Crear tres archivos CSS diferentes, cada uno con un estilo único, para el mismo archivo HTML: un archivo con un estilo formal y elegante, otro con un estilo colorido y divertido, y un tercero con un aspecto minimalista y limpio.*/
+
+/*ESTILO FORMAL*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box !important;
+    text-decoration: none !important;
+    list-style: none;
+    outline: none !important;
+}
+
+body{
+    max-width: 1440px;
+    margin: 0 auto;
+    font-family: 'Times New Roman', Times, serif;
+
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    
+}
+
