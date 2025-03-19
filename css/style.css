@@ -66,16 +66,19 @@ img{
     font-size: 1em;
 }
 .main__enlaces__link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
     width: 24em;
     padding: 1em 0;
     border-radius: .5em;
-    text-align: center;
     font-weight: 600;
+    text-align: center;
     color: #F6F6F6;
     border: 2px solid #22D4FD;
     
 }
 .main__enlaces__link:hover{
-    color: #000000;
-    background-color: #22D4FD;
+    background-color: #272727;
 }
