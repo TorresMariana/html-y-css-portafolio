@@ -32,7 +32,7 @@ img{
     margin: 5%;
 }
 
-.logo, .main__contenido__titulo{
+.logo, .main__contenido__titulo, .main__enlaces__subtitulo{
     font-family: 'krona one', sans-serif;
     font-weight: 400;
 }
@@ -57,18 +57,25 @@ img{
 
 .main__enlaces{
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+    border: 2px solid red;
+}
+.main__enlaces__subtitulo{
+    font-size: 1em;
 }
 .main__enlaces__link{
-    width: 16em;
+    width: 24em;
     padding: 1em 0;
-    border-radius: 1em;
+    border-radius: .5em;
     text-align: center;
     font-weight: 600;
-    color: #000000;
-    background-color: #22D4FD;
+    color: #F6F6F6;
+    border: 2px solid #22D4FD;
     
 }
 .main__enlaces__link:hover{
-    background-color: #F6F6F6;
+    color: #000000;
+    background-color: #22D4FD;
 }
