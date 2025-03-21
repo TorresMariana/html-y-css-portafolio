@@ -27,7 +27,6 @@ img{
     align-items: center;
     justify-content: space-between;
     gap: 3em;
-    /* margin: 5%; */
     padding: 5% 10%;
 }
 
@@ -42,7 +41,7 @@ img{
 .header__menu{
     display: flex;
     align-items: center;
-    gap: 4em;
+    gap: 5em;
 }
 .header__menu__link{
     color: #22D4FD;
