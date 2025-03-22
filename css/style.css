@@ -35,7 +35,7 @@ img{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 3em;
+    gap: 4em;
     padding: 5% 10%;
 }
 
@@ -54,7 +54,8 @@ img{
 }
 .header__menu__link{
     color: var(--color-terciario);
-    font-size: 1.2em;
+    /* font-size: 1.2em; */
+    font-size: 1.5rem;
     font-weight: 600;
     border-bottom: 2px solid var(--color-primario);
 }
@@ -66,20 +67,23 @@ img{
 
 /*MAIN*/
 .main__contenido{
-    width: 600px;
+    /* width: 600px; */
+    width: 50%;
     display: flex;
     flex-direction: column;
     gap: 2em;
     
 }
 .main__contenido__titulo{
-    font-size: 2.2em;
+    /* font-size: 2.2em; */
+    font-size: 2.25rem;
 }
 .resaltar__texto{
     color: var(--color-terciario);
 }
 .main__contenido__texto{
-    font-size: 1em;
+    /* font-size: 1em; */
+    font-size: 1.5rem;
 }
 
 .main__enlaces{
@@ -89,18 +93,21 @@ img{
     gap: 2em;
 }
 .main__enlaces__subtitulo{
-    font-size: 1.2em;
+    /* font-size: 1.2em; */
+    font-size: 1.5rem;
 }
 .main__enlaces__link{
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 1em;
-    width: 24em;
+    /* width: 24em; */
+    width: 50%;
     padding: 1em 0;
     border-radius: .5em;
     font-weight: 600;
-    font-size: 1em;
+    /* font-size: 1em; */
+    font-size: 1.5rem;
     text-align: center;
     color: var(--color-secundario);
     border: 2px solid var(--color-terciario);
@@ -110,9 +117,15 @@ img{
     background-color: var(--color-hover);
     cursor: pointer;
 }
+.main__imagen{
+    width: 50%;
+}
 
 .main__lista{
     padding-top: 2em;
+}
+.main__lista__link{
+    font-size: 1.5rem;
 }
 
 
@@ -124,5 +137,23 @@ footer.container{
     background-color: var(--color-terciario);
     text-align: center;
     justify-content: center;
-    font-size: 1em;
+    /* font-size: 1em; */
+    font-size: 1.5rem;
+}
+
+
+
+@media (max-width: 1200px) {
+    header.container{
+        justify-content: center;
+        padding: 10%;
+    }
+    main.container{
+        flex-direction: column-reverse;
+        /* padding: 5%; */
+    }
+    .main__contenido{
+        width: auto;
+    }
+    
 }
