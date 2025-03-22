@@ -1,12 +1,20 @@
 /*Tipografias*/
 @import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+:root{
+    --color-primario : #000000;
+    --color-secundario: #F6F6F6;
+    --color-terciario: #22D4FD;
+
+    --fuente-montserrat: 'Montserrat', sans-serif;
+    --fuente-krona: 'krona one', sans-serif;
+}
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box !important;
     text-decoration: none !important;
-    list-style: none;
+    /* list-style: none; */
     outline: none !important;
 }
 
@@ -102,6 +110,11 @@ img{
     background-color: #272727;
     cursor: pointer;
 }
+
+.main__lista{
+    padding-top: 2em;
+}
+
 
 
 /*FOOTER*/
