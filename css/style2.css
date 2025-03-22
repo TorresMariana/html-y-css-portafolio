@@ -1,23 +1,31 @@
 /*Crear tres archivos CSS diferentes, cada uno con un estilo único, para el mismo archivo HTML: un archivo con un estilo formal y elegante, otro con un estilo colorido y divertido, y un tercero con un aspecto minimalista y limpio.*/
 
+
 /*ESTILO FORMAL*/
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box !important;
-    text-decoration: none !important;
-    list-style: none;
-    outline: none !important;
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+:root{
+    --color-primario : #272727;
+    --color-secundario: #F6F6F6;
+    --color-terciario: #22D4FD;
+    --color-hover: #272727;
+
+    --fuente-montserrat: 'Montserrat', sans-serif;
+    /* --fuente-krona: "Alfa Slab One", serif; */
+    --fuente-krona: "Abril Fatface", serif;
 }
 
 body{
-    max-width: 1440px;
-    margin: 0 auto;
-    font-family: 'Times New Roman', Times, serif;
+    /* font-family: 'Times New Roman', Times, serif; */
+    /* font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
 
-    background: rgb(238,174,202);
-    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+
+    /* background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%); */
     
 }
 

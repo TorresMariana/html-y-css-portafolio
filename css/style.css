@@ -5,6 +5,7 @@
     --color-primario : #000000;
     --color-secundario: #F6F6F6;
     --color-terciario: #22D4FD;
+    --color-hover: #272727;
 
     --fuente-montserrat: 'Montserrat', sans-serif;
     --fuente-krona: 'krona one', sans-serif;
@@ -22,9 +23,9 @@ body{
     max-width: 1200px;
     margin: 0 auto;
     
-    background-color: #000000;
-    color: #F6F6F6;
-    font-family: 'Montserrat', sans-serif;
+    background-color: var(--color-primario);
+    color: var(--color-secundario);
+    font-family: var(--fuente-montserrat);
 }
 
 img{
@@ -39,7 +40,7 @@ img{
 }
 
 .logo, .main__contenido__titulo, .main__enlaces__subtitulo{
-    font-family: 'krona one', sans-serif;
+    font-family: var(--fuente-krona);
     font-weight: 400;
 }
 
@@ -52,15 +53,15 @@ img{
     gap: 5em;
 }
 .header__menu__link{
-    color: #22D4FD;
+    color: var(--color-terciario);
     font-size: 1.2em;
     font-weight: 600;
-    border-bottom: 2px solid #000000;
+    border-bottom: 2px solid var(--color-primario);
 }
 .header__menu__link:hover{
     cursor: pointer;
-    color: #F6F6F6;
-    border-bottom: 2px solid #F6F6F6;
+    color: var(--color-secundario);
+    border-bottom: 2px solid var(--color-secundario);
 }
 
 /*MAIN*/
@@ -75,7 +76,7 @@ img{
     font-size: 2.2em;
 }
 .resaltar__texto{
-    color: #22D4FD;
+    color: var(--color-terciario);
 }
 .main__contenido__texto{
     font-size: 1em;
@@ -86,7 +87,6 @@ img{
     flex-direction: column;
     align-items: center;
     gap: 2em;
-    border: 2px solid red;
 }
 .main__enlaces__subtitulo{
     font-size: 1.2em;
@@ -102,12 +102,12 @@ img{
     font-weight: 600;
     font-size: 1em;
     text-align: center;
-    color: #F6F6F6;
-    border: 2px solid #22D4FD;
+    color: var(--color-secundario);
+    border: 2px solid var(--color-terciario);
     
 }
 .main__enlaces__link:hover{
-    background-color: #272727;
+    background-color: var(--color-hover);
     cursor: pointer;
 }
 
@@ -120,8 +120,8 @@ img{
 /*FOOTER*/
 footer.container{
     padding: 1em;
-    color: #000000;
-    background-color: #22D4FD;
+    color: var(--color-primario);
+    background-color: var(--color-terciario);
     text-align: center;
     justify-content: center;
     font-size: 1em;
