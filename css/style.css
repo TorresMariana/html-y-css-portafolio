@@ -54,8 +54,8 @@ img{
 }
 .header__menu__link{
     color: var(--color-terciario);
-    /* font-size: 1.2em; */
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    /* font-size: 1.5rem; */
     font-weight: 600;
     border-bottom: 2px solid var(--color-primario);
 }
@@ -65,9 +65,15 @@ img{
     border-bottom: 2px solid var(--color-secundario);
 }
 
+/*MENU HAMBURGUESA*/
+.menu__hamburguesa, .menu__hamburguesa__boton, .logo{
+    display: none;
+}
+
+
+
 /*MAIN*/
 .main__contenido{
-    /* width: 600px; */
     width: 50%;
     display: flex;
     flex-direction: column;
@@ -75,15 +81,15 @@ img{
     
 }
 .main__contenido__titulo{
-    /* font-size: 2.2em; */
-    font-size: 2.25rem;
+    font-size: 2.2rem;
+    /* font-size: 2.25rem; */
 }
 .resaltar__texto{
     color: var(--color-terciario);
 }
 .main__contenido__texto{
-    /* font-size: 1em; */
-    font-size: 1.5rem;
+    /* font-size: 1rem; */
+    font-size: 1.2rem;
 }
 
 .main__enlaces{
@@ -93,21 +99,20 @@ img{
     gap: 2em;
 }
 .main__enlaces__subtitulo{
-    /* font-size: 1.2em; */
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    /* font-size: 1.5rem; */
 }
 .main__enlaces__link{
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 1em;
-    /* width: 24em; */
     width: 50%;
     padding: 1em 0;
     border-radius: .5em;
     font-weight: 600;
-    /* font-size: 1em; */
-    font-size: 1.5rem;
+    font-size: 1rem;
+    /* font-size: 1.5rem; */
     text-align: center;
     color: var(--color-secundario);
     border: 2px solid var(--color-terciario);
@@ -121,11 +126,11 @@ img{
     width: 50%;
 }
 
-.main__lista{
-    padding-top: 2em;
+.main__subcontenido, .main__lista{
+    padding: 5% 0;
 }
 .main__lista__link{
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 
 
@@ -137,20 +142,98 @@ footer.container{
     background-color: var(--color-terciario);
     text-align: center;
     justify-content: center;
-    /* font-size: 1em; */
-    font-size: 1.5rem;
+    font-size: 1rem;
+    /* font-size: 1.5rem; */
 }
 
 
 
 @media (max-width: 1200px) {
     header.container{
-        justify-content: center;
+        justify-content: space-between;
         padding: 10%;
     }
+
+    .logo{
+        display: initial;
+    }
+    .header__menu{
+        flex-direction: column;
+        align-items:flex-end;
+        position: fixed;
+        gap: 3em;
+        top: 0;
+        left: 50%;
+        right: 0;
+        z-index: 2;
+        background-color: var(--color-terciario);
+        padding: 20% 10%;
+        height: 100vh;
+        /* display: none; */
+        opacity: 0;
+        transition: all .5s ease-out;
+        transform: translateX(100%);
+    }
+    .header__menu__link{
+        color: var(--color-primario);
+        border-bottom: 2px solid var(--color-primario);
+    }
+    .header__menu::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 100%;
+        width: 100vw;
+        height: 100%;
+        z-index: -1;
+        background-color: rgba(0, 0, 0, 0.8);
+        backdrop-filter: blur(10px);
+    }
+
+
+    /*MENU HAMBURGUESA*/
+    .menu__hamburguesa__boton{
+        display: flex;
+        flex-direction: column;
+        width: 3rem;
+        height: 3rem;
+        background: transparent;
+        gap: .65rem;
+        border: none;
+        cursor: pointer;
+        z-index: 3;
+    }
+    .menu__boton__hamburguesa__contenido{
+        background-color: var(--color-terciario);
+        height: 8%;
+        width: auto;
+        border-radius: 5px;
+        transition: all .5s;
+        transform-origin: left;
+    }
+
+    #menu-hamburguesa:checked ~ .header__menu{
+        /* display: flex; */
+        opacity: 1;
+        transform: translateX(0);
+    }
+    #menu-hamburguesa:checked + .menu__hamburguesa__boton .menu__boton__hamburguesa__contenido:first-child{
+        transform: rotate(45deg) translateY(-.25rem);
+    }
+    #menu-hamburguesa:checked + .menu__hamburguesa__boton .menu__boton__hamburguesa__contenido:nth-child(2){
+        opacity: 0;
+    }
+    #menu-hamburguesa:checked + .menu__hamburguesa__boton .menu__boton__hamburguesa__contenido:last-child{
+        transform: rotate(-45deg) translateY(.25rem);
+    }
+    #menu-hamburguesa:checked + .menu__hamburguesa__boton .menu__boton__hamburguesa__contenido{
+        background-color: var(--color-primario);
+    }
+
+
+
     main.container{
         flex-direction: column-reverse;
-        /* padding: 5%; */
     }
     .main__contenido{
         width: auto;
