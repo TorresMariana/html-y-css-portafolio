@@ -7,8 +7,8 @@
     --color-terciario: #22D4FD;
     --color-hover: #272727;
 
-    --fuente-montserrat: 'Montserrat', sans-serif;
-    --fuente-krona: 'krona one', sans-serif;
+    --fuente-principal: 'Montserrat', sans-serif;
+    --fuente-secundaria: 'krona one', sans-serif;
 }
 *{
     margin: 0;
@@ -25,7 +25,7 @@ body{
     
     background-color: var(--color-primario);
     color: var(--color-secundario);
-    font-family: var(--fuente-montserrat);
+    font-family: var(--fuente-principal);
 }
 
 img{
@@ -40,7 +40,7 @@ img{
 }
 
 .logo, .main__contenido__titulo, .main__enlaces__subtitulo{
-    font-family: var(--fuente-krona);
+    font-family: var(--fuente-secundaria);
     font-weight: 400;
 }
 
@@ -140,15 +140,28 @@ footer.container{
     padding: 1em;
     color: var(--color-primario);
     background-color: var(--color-terciario);
-    text-align: center;
-    justify-content: center;
+    /* text-align: center;
+    justify-content: center; */
     font-size: 1rem;
     /* font-size: 1.5rem; */
+}
+.footer__enlaces{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+.footer__enlaces__link{
+    color: var(--color-primario);
+    border-bottom: 2px solid var(--color-terciario);
+}
+.footer__enlaces__link:hover, .footer__enlaces__link:active{
+    color: var(--color-secundario);
+    border-bottom: 2px solid var(--color-secundario);
 }
 
 
 
-@media (max-width: 1200px) {
+@media (max-width: 950px) {
     header.container{
         justify-content: space-between;
         padding: 10%;
@@ -173,6 +186,7 @@ footer.container{
         opacity: 0;
         transition: all .5s ease-out;
         transform: translateX(100%);
+        visibility: hidden;
     }
     .header__menu__link{
         color: var(--color-primario);
@@ -216,6 +230,7 @@ footer.container{
         /* display: flex; */
         opacity: 1;
         transform: translateX(0);
+        visibility: visible;
     }
     #menu-hamburguesa:checked + .menu__hamburguesa__boton .menu__boton__hamburguesa__contenido:first-child{
         transform: rotate(45deg) translateY(-.25rem);
@@ -239,4 +254,7 @@ footer.container{
         width: auto;
     }
     
+    footer.container, .footer__enlaces{
+        flex-direction: column;
+    }
 }

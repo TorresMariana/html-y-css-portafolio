@@ -7,25 +7,59 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-
-:root{
-    --color-primario : #272727;
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+/* :root{
+    --color-primario : #3d405b;
     --color-secundario: #F6F6F6;
-    --color-terciario: #22D4FD;
+    --color-terciario: #81b29a;
     --color-hover: #272727;
 
     --fuente-montserrat: 'Montserrat', sans-serif;
-    /* --fuente-krona: "Alfa Slab One", serif; */
+    /* --fuente-krona: "Alfa Slab One", serif; /
     --fuente-krona: "Abril Fatface", serif;
+} */
+
+:root{
+    --color-primario : #eaf4f4;
+    --color-secundario: #272727;
+    --color-terciario: #088395;
+    --color-hover: #6b9080;
+
+    --fuente-principal: "Lato", sans-serif;
+    --fuente-secundaria: "Fraunces", serif;
 }
 
-body{
-    /* font-family: 'Times New Roman', Times, serif; */
-    /* font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
+
+/* body{
+    font-family: 'Times New Roman', Times, serif;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 
 
-    /* background: rgb(238,174,202);
-    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%); */
-    
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+
+} */
+.main__contenido__texto, .main__lista{
+    line-height: 2rem;
+}
+.logo, .main__contenido__titulo, .main__enlaces__subtitulo{
+    font-family: var(--fuente-secundaria);
+    font-weight: 700;
+}
+.resaltar__texto{
+    font-style: italic;
 }
 
+/* .main__enlaces__link img{
+    filter: invert(40%) sepia(60%) saturate(200%) hue-rotate(150deg);
+} */
+
+.main__enlaces__link img{
+    filter: brightness(0) saturate(100%) invert(51%) sepia(23%) saturate(372%) hue-rotate(102deg) brightness(100%) contrast(84%);
+    filter: brightness(0) saturate(100%) invert(23%) sepia(94%) saturate(2200%) hue-rotate(169deg) brightness(101%) contrast(94%);
+}
+.main__enlaces__link:hover img{
+    filter: brightness(0) saturate(100%) invert(7%) sepia(1%) saturate(727%) hue-rotate(317deg) brightness(100%) contrast(81%);
+}

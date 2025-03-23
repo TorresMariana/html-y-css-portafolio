@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafolio</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css" id="stylesheet__link">
 </head>
 <body>
     <header class="container">
         <h2 class="logo">Ana <span class="resaltar__texto">García.</span></h2>
         <!--Menu hamburguesa-->
         <input class="menu__hamburguesa" type="checkbox" id="menu-hamburguesa">
-        <button class="menu__hamburguesa__boton" aria-label="Menu de navegación" onclick="document.getElementById('menu-hamburguesa').click();">
+        <button class="menu__hamburguesa__boton" aria-label="Menu de navegación" onclick="menuHamburguesa();">
             <div class="menu__boton__hamburguesa__contenido"></div>
             <div class="menu__boton__hamburguesa__contenido"></div>
             <div class="menu__boton__hamburguesa__contenido"></div>
@@ -45,6 +46,19 @@
     <footer class="container">
         <!-- <span>©Copyright 2025 . Todos los derechos reservados.</span> -->
         <p>Desarrollado por Alura Latam</p>
+        <!-- <div class="footer__enlaces">
+            <a href="index.html" class="footer__enlaces__link" id="footer__enlace__link1">Original</a>
+            <a href="index.html" class="footer__enlaces__link" id="footer__enlace__link2">Formal</a>
+            <a href="index.html" class="footer__enlaces__link" id="footer__enlace__link3">Colorido</a>
+            <a href="index.html" class="footer__enlaces__link" id="footer__enlace__link4">Minimalista</a>
+        </div> -->
+        <div class="footer__enlaces">
+            <a href="#" class="footer__enlaces__link" onclick="cambiarArchivoCSS('style.css', event);">Original</a>
+            <a href="#" class="footer__enlaces__link" onclick="cambiarArchivoCSS('style2.css', event);">Formal</a>
+            <a href="#" class="footer__enlaces__link" onclick="cambiarArchivoCSS('style3.css', event);">Colorido</a>
+            <a href="#" class="footer__enlaces__link" onclick="cambiarArchivoCSS('style4.css', event);">Minimalista</a>
+        </div>
     </footer>
+    <script src="js/app.js"></script>
 </body>
 </html>
