@@ -1,7 +1,64 @@
 /*Crear tres archivos CSS diferentes, cada uno con un estilo único, para el mismo archivo HTML: un archivo con un estilo formal y elegante, otro con un estilo colorido y divertido, y un tercero con un aspecto minimalista y limpio.*/
 
 /*ESTILO MINIMALISTA*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+:root{
+    --color-primario : #FFFFFF;
+    --color-secundario: #000000;
+    --color-terciario:  #9AA6B2;
+    --color-hover: #22D4FD;
+    /* #212529 
+    #9AA6B2*/
+
+    --fuente-principal: "Montserrat", sans-serif;
+    --fuente-secundaria: "Montserrat", sans-serif;
+}
+
+
+
+
+.logo, .main__contenido__titulo, .main__enlaces__subtitulo{
+    font-family: var(--fuente-secundaria);
+    font-weight: 700;
+    text-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+}
+.header__menu__link:hover{
+    color: var(--color-hover);
+    border-bottom: 2px solid var(--color-hover);
+}
+.main__contenido__titulo{
+    font-size: 2.5rem;
+}
+.resaltar__texto{
+    color: var(--color-hover);
+}
+
+.main__enlaces__link img{
+    filter: brightness(0) saturate(100%) invert(67%) sepia(10%) saturate(378%) hue-rotate(169deg) brightness(97%) contrast(87%);
+}
+.main__enlaces__link{
+    box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+}
+.main__enlaces__link:hover{
+    color: var(--color-secundario);
+    border: 2px solid var(--color-hover);   
+    background-color: var(--color-primario);
+    cursor: pointer;
+}
+.main__enlaces__link:hover img{
+    filter: none;
+}
+footer.container{
+    background-color: var(--color-secundario);
+}
+.footer__enlaces__link{
+    border-bottom: 2px solid var(--color-secundario);
+}
+.footer__enlaces__link:hover, .footer__enlaces__link:active{
+    color: var(--color-terciario);
+    border-bottom: 2px solid var(--color-terciario);
+}
 
 
 
