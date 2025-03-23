@@ -12,28 +12,6 @@ function menuHamburguesa(){
 
 
 
-// function cambiarArchivoCSS(estilo){
-//     let estiloSeleccionado = document.getElementById(estilo);
-//     console.log(estiloSeleccionado);
-
-
-//     if(estiloSeleccionado == 'footer__enlace__link2'){
-//         document.querySelector('link[rel="stylesheet"]').setAttribute('href', 'css/style2.css');
-//     }
-//     else if(estiloSeleccionado == 'footer__enlace__link3'){
-//         document.querySelector('link[rel="stylesheet"]').setAttribute('href', 'css/style3.css');
-//     }
-//     else if(estiloSeleccionado == 'footer__enlace__link4'){
-//         document.querySelector('link[rel="stylesheet"]').setAttribute('href', 'css/style4.css');
-//     }
-//     else{
-//         document.querySelector('link[rel="stylesheet"]').setAttribute('href', 'css/style.css');
-        
-//     }
-
-// }
-
-
 
 
 
@@ -44,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
         // Guardar la selección en localStorage
         localStorage.setItem('selectedStyle', estilo);
-        console.log(estilo);
+        // console.log(estilo);
 
         // Cambiar el archivo CSS actual por el nuevo.
         let link = document.getElementById('stylesheet__link');

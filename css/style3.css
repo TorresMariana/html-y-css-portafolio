@@ -1,7 +1,27 @@
 /*Crear tres archivos CSS diferentes, cada uno con un estilo único, para el mismo archivo HTML: un archivo con un estilo formal y elegante, otro con un estilo colorido y divertido, y un tercero con un aspecto minimalista y limpio.*/
 
 /*ESTILO COLORIDO*/
+:root{
+    --color-primario : #000000;
+    --color-secundario: #f6f6f6;
+    --color-terciario: #00ff22;
+    --color-hover: #ffd518;
+    /* #22D4FD */
 
+    --fuente-principal: 'Montserrat', sans-serif;
+    --fuente-secundaria: 'krona one', sans-serif;
+}
+
+/* :root{
+    --color-primario: #000000;
+    --color-secundario: #f6f6f6;
+    --color-terciario: #22D4FD;
+    --color-hover: #00ff22;
+    /* #ffd518 #803bff*
+
+    --fuente-principal: 'Montserrat', sans-serif;
+    --fuente-secundaria: 'krona one', sans-serif;
+} */
 
 body{
     background: rgb(2,0,36);
@@ -12,4 +32,36 @@ body{
 }
 
 
+.header__menu__link{
+    border-bottom: 2px solid transparent;
+}
 
+.main__enlaces__link img{
+    filter: brightness(0) saturate(100%) invert(58%) sepia(91%) saturate(2783%) hue-rotate(90deg) brightness(119%) contrast(118%);
+}
+
+.main__enlaces__link:hover{
+    color: var(--color-primario);
+    border: 2px solid var(--color-hover);   
+    background-color: var(--color-hover);
+    cursor: pointer;
+}
+.main__enlaces__link:hover img{
+    filter: brightness(0) saturate(100%) invert(0%) sepia(95%) saturate(5%) hue-rotate(107deg) brightness(92%) contrast(100%);
+}
+
+
+
+footer.container{
+    color: var(--color-primario);
+    background-color: var(--color-hover);
+
+}
+.footer__enlaces__link{
+    color: var(--color-primario);
+    border-bottom: 2px solid var(--color-hover);
+}
+.footer__enlaces__link:hover, .footer__enlaces__link:active{
+    color: var(--color-secundario);
+    border-bottom: 2px solid var(--color-secundario);
+}
